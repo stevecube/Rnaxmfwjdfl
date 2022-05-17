@@ -1,0 +1,355 @@
+// getElementById
+const label1 = document.getElementById('output-1');
+const label2 = document.getElementById('output-2');
+const input1 = document.getElementById('input-1');
+const outputt = document.getElementById('outputt');
+const label_1 = document.getElementById('label-1');
+const label_container_1 = document.getElementById('label-container-1');
+const first = document.getElementById('first');
+const second = document.getElementById('second');
+const third = document.getElementById('third');
+const forth = document.getElementById('forth');
+const fifth = document.getElementById('fifth');
+const sixth = document.getElementById('sixth');
+const seventh = document.getElementById('seventh');
+const eight = document.getElementById('eight');
+// 변수 선언
+start_2 = ': ';
+score = 0;
+lo = 0;
+A = '마음속에 떠오르는 생각이나 운율이 있는 언어로 압축하여 표현하는 문학';
+B = '정해진 형식에 맞추어 쓴 시';
+C = '정해진 형식 없이 자유롭게 쓴 시';
+D = '행을 구분하지 않고 줄글로 쓴 시';
+E = '개인의 감정과 생각을 주관적으로 표현한 시';
+F = '역사적 사건이나 신화, 전설, 영웅의 이야기를 쓴 시';
+G = '연극의 대본처럼 대사로 이루어진 시';
+H = '시를 읽을 때 느껴지는 말의 가락, 리듬';
+I = '시인이 시를 통해 말하고자 하는 중심 생각';
+J = '시를 읽을 때 떠오르는 느낌이나 모습';
+b = [A, B, C, D, E, F, G, H];
+correct = '맞히셨습니다.';
+incorrect = '맞히지 못하셨습니다. 다시 시도하세요';
+correctorincorrect = false;
+// 배열 선언
+label_output = ['시의 개념과 특성', '시적 화자'];
+label1_output = ['시', '정형시', '자유시', '산문시', '서정시', '서사시', '극시', '운율'];
+label1.innerHTML = label_output[0];
+label2.innerHTML = label1_output[0] + start_2;
+outputt.innerHTML = '제출';
+// 공용 함수
+function change_1() {
+    lo += 1;
+    label2.innerHTML = label1_output[lo] + start_2;
+    score += 1;
+};
+// 중복 체크 함수
+function duplicate_check() {
+    const random1 = b[Math.floor(Math.random() * b.length)];
+    if (random1 == b[0]) {
+        b.shift();
+        console.log(b);
+    }
+    else if (random1 == b[1]) {
+        a1 = b.slice(0, 1);
+        a2 = b.splice(2, 6);
+        a3 = a1.concat(a2);
+        b = a3;
+        console.log(b);
+    }
+    else if (random1 == b[2]) {
+        a1 = b.slice(0, 2);
+        a2 = b.splice(3, 5);
+        a3 = a1.concat(a2);
+        b = a3;
+        console.log(b);
+    }
+    else if (random1 == b[3]) {
+        a1 = b.slice(0, 3);
+        a2 = b.splice(4, 4);
+        a3 = a1.concat(a2);
+        b = a3;
+        console.log(b);
+    }
+    else if (random1 == b[4])  {
+        a1 = b.slice(0, 4);
+        a2 = b.splice(5, 3);
+        a3 = a1.concat(a2);
+        b = a3;
+        console.log(b);
+    }
+    else if (random1 == b[5]) {
+        a1 = b.slice(0, 5);
+        a2 = b.splice(6, 2);
+        a3 = a1.concat(a2);
+        b = a3;
+        console.log(b);
+    }
+    else if (random1 == b[6]) {
+        a1 = b.slice(0, 6);
+        a2 = b.splice(7, 1);
+        a3 = a1.concat(a2);
+        b = a3;
+        console.log(b);
+    }
+    else if (random1 == b[7]) {
+        b.pop();
+        console.log(b);
+    }
+    const random2 = b[Math.floor(Math.random() * b.length)];
+    if (random2 == b[0]) {
+        b.shift();
+        console.log(b);
+    }
+    else if (random2 == b[1]) {
+        a1 = b.slice(0, 1);
+        a2 = b.splice(2, 5);
+        a3 = a1.concat(a2);
+        b = a3;
+        console.log(b);
+    }
+    else if (random2 == b[2]) {
+        a1 = b.slice(0, 2);
+        a2 = b.splice(3, 4);
+        a3 = a1.concat(a2);
+        b = a3;
+        console.log(b);
+    }
+    else if (random2 == b[3]) {
+        a1 = b.slice(0, 3);
+        a2 = b.splice(4, 3);
+        a3 = a1.concat(a2);
+        b = a3;
+        console.log(b);
+    }
+    else if (random2 == b[4]) {
+        a1 = b.slice(0, 4);
+        a2 = b.splice(5, 2);
+        a3 = a1.concat(a2);
+        b = a3;
+        console.log(b);
+    }
+    else if (random2 == b[5]) {
+        a1 = b.slice(0, 5);
+        a2 = b.splice(6, 1);
+        a3 = a1.concat(a2);
+        b = a3;
+        console.log(b);
+    }
+    else if (random2 == b[6]) {
+        b.pop();
+        console.log(b);
+    }
+    const random3 = b[Math.floor(Math.random() * b.length)];
+    if (random3 == b[0]) {
+        b.shift();
+        console.log(b);
+    }
+    else if (random3 == b[1]) {
+        a1 = b.slice(0, 1);
+        a2 = b.splice(2, 4);
+        a3 = a1.concat(a2);
+        b = a3;
+        console.log(b);
+    }
+    else if (random3 == b[2]) {
+        a1 = b.slice(0, 2);
+        a2 = b.splice(3, 3);
+        a3 = a1.concat(a2);
+        b = a3;
+        console.log(b);
+    }
+    else if (random3 == b[3]) {
+        a1 = b.slice(0, 3);
+        a2 = b.splice(4, 2);
+        a3 = a1.concat(a2);
+        b = a3;
+        console.log(b);
+    }
+    else if (random3 == b[4]) {
+        a1 = b.slice(0, 4);
+        a2 = b.splice(5, 1);
+        a3 = a1.concat(a2);
+        b = a3;
+        console.log(b);
+    }
+    else if (random3 == b[5]) {
+        b.pop();
+        console.log(b);
+    }
+    const random4 = b[Math.floor(Math.random() * b.length)];
+    if (random4 == b[0]) {
+        b.shift();
+        console.log(b);
+    }
+    else if (random4 == b[1]) {
+        a1 = b.slice(0, 1);
+        a2 = b.splice(2, 3);
+        a3 = a1.concat(a2);
+        b = a3;
+        console.log(b);
+    }
+    else if (random4 == b[2]) {
+        a1 = b.slice(0, 2);
+        a2 = b.splice(3, 2);
+        a3 = a1.concat(a2);
+        b = a3;
+        console.log(b);
+    }
+    else if (random4 == b[3]) {
+        a1 = b.slice(0, 3);
+        a2 = b.splice(4, 1);
+        a3 = a1.concat(a2);
+        b = a3;
+        console.log(b);
+    }
+    else if (random4 == b[4]) {
+        b.pop();
+        console.log(b);
+    }
+    const random5 = b[Math.floor(Math.random() * b.length)];
+    if (random5 == b[0]) {
+        b.shift();
+        console.log(b);
+    }
+    else if (random5 == b[1]) {
+        a1 = b.slice(0, 1);
+        a2 = b.splice(2, 2);
+        a3 = a1.concat(a2);
+        b = a3;
+        console.log(b);
+    }
+    else if (random5 == b[2]) {
+        a1 = b.slice(0, 2);
+        a2 = b.splice(3, 1);
+        a3 = a1.concat(a2);
+        b = a3;
+        console.log(b);
+    }
+    else if (random5 == b[3]) {
+        b.pop();
+        console.log(b);
+    }
+    const random6 = b[Math.floor(Math.random() * b.length)];
+    if (random6 == b[0]) {
+        b.shift();
+        console.log(b);
+    }
+    else if (random6 == b[1]) {
+        a1 = b.slice(0, 1);
+        a2 = b.splice(2, 1);
+        a3 = a1.concat(a2);
+        b = a3;
+        console.log(b);
+    }
+    else if (random6 == b[2]) {
+        b.pop();
+        console.log(b);
+    }
+    const random7 = b[Math.floor(Math.random() * b.length)];
+    if (random7 == b[0]){
+        b.shift();
+        console.log(b);
+    }
+    else if (random7 == b[1]) {
+        b.pop();
+        console.log(b);
+    }
+    const random8 = b[Math.floor(Math.random() * b.length)];
+    if (random8 == b[0]) {
+        b.shift();
+        console.log(b);
+    }
+    first.innerHTML = random1;
+    second.innerHTML = random2;
+    third.innerHTML = random3;
+    forth.innerHTML = random4;
+    fifth.innerHTML = random5;
+    sixth.innerHTML = random6;
+    seventh.innerHTML = random7;
+    eight.innerHTML = random8;
+}
+duplicate_check();
+outputt.addEventListener('click', function() {
+    inputt = input1.value;
+    if (score == 0) {
+        if (inputt == A) {
+            label_1.innerHTML = correct;
+            correctorincorrect = true;
+            change_1();
+        }
+        else {
+            label_1.innerHTML = incorrect;
+        }
+    }
+    else if (score == 1) {
+        if (inputt == C) {
+            label_1.innerHTML = correct;
+            correctorincorrect = true;
+            change_1();
+        }
+        else {
+            label_1.innerHTML= incorrect;
+        }
+    }
+    else if (score == 2) {
+        if (inputt == X) {
+            label_1.innerHTML = correct;
+            correctorincorrect = true;
+            change_1();
+        }
+        else {
+            label_1.innerHTML = incorrect;
+        }
+    }
+    else if (score == 3) {
+        if (inputt == D) {
+            label_1.innerHTML = correct;
+            correctorincorrect = true;
+            change_1();
+        }
+        else {
+            label_1.innerHTML = incorrect;
+        }
+    }
+    else if (score == 4) {
+        if (inputt = E) {
+            label_1.innerHTML = correct;
+            correctorincorrect = true;
+            change_1();
+        }
+        else {
+            label_1.innerHTML = incorrect;
+        }
+    }
+    else if (score == 5) {
+        if (inputt == F) {
+            label_1.innerHTML = correct;
+            correctorincorrect = true;
+            change_1();
+        }
+        else {
+            label_1.innerHTML = incorrect;
+        }
+    }
+    else if (score == 6) {
+        if (inputt == G) {
+            label_1.innerHTML = correct;
+            correctorincorrect = true;
+            change_1();
+        }
+        else {
+            label_1.innerHTML = incorrect;
+        }
+    }
+    else if (score == 7) {
+        if (inputt == H) {
+            label_1.innerHTML = correct;
+            correctorincorrect = true;
+            change_1();
+        }
+        else {
+            label_1.innerHTML = incorrect;
+        }
+    }
+});
