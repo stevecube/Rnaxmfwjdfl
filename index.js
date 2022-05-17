@@ -27,7 +27,7 @@ G = '연극의 대본처럼 대사로 이루어진 시';
 H = '시를 읽을 때 느껴지는 말의 가락, 리듬';
 I = '시인이 시를 통해 말하고자 하는 중심 생각';
 J = '시를 읽을 때 떠오르는 느낌이나 모습';
-b = [A, B, C, D, E, F, G, H];
+b = [A, B, C, D, E, F, G, H, I, J];
 correct = '맞히셨습니다.';
 incorrect = '맞히지 못하셨습니다. 다시 시도하세요';
 correctorincorrect = false;
@@ -344,6 +344,16 @@ outputt.addEventListener('click', function() {
     }
     else if (score == 7) {
         if (inputt == H) {
+            label_1.innerHTML = correct;
+            correctorincorrect = true;
+            change_1();
+        }
+        else {
+            label_1.innerHTML = incorrect;
+        }
+    }
+    else if (score == 8) {
+        if (inputt == I) {
             label_1.innerHTML = correct;
             correctorincorrect = true;
             change_1();
