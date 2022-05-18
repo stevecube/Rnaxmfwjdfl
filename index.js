@@ -1,4 +1,4 @@
-// getElementById
+// 변수 선언
 const label1 = document.getElementById('output-1');
 const label2 = document.getElementById('output-2');
 const input1 = document.getElementById('input-1');
@@ -15,6 +15,8 @@ const seventh = document.getElementById('seventh');
 const eight = document.getElementById('eight');
 const ninth = document.getElementById('ninth');
 const tenth = document.getElementById('tenth');
+const eleventh = document.getElementById('eleventh');
+const twelfth = document.getElementById('twelfth');
 // 변수 선언
 start_2 = ': ';
 score = 0;
