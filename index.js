@@ -4,7 +4,6 @@ const label2 = document.getElementById('output-2');
 const input1 = document.getElementById('input-1');
 const outputt = document.getElementById('outputt');
 const label_1 = document.getElementById('label-1');
-const label_container_1 = document.getElementById('label-container-1');
 const first = document.getElementById('first');
 const second = document.getElementById('second');
 const third = document.getElementById('third');
